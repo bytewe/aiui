@@ -1,0 +1,89 @@
+<!--
+ * @Author: airobot
+ * @Date: 2022-01-28 23:51:00
+ * @LastEditors: airobot
+ * @LastEditTime: 2022-04-11 21:39:38
+ * @Description: 遮罩层
+-->
+
+<template>
+    <ai-page>
+        <ai-cell-group>
+            <ai-cell
+                v-for="(item, index) in list"
+                :key="index"
+                :icon="item.iconUrl"
+                :title="item.title"
+                arrow
+                :border="index !== list.length - 1"
+                @click="openMask(index)"
+            />
+        </ai-cell-group>
+
+        <ai-overlay :show="show" @click="show = !show" />
+
+        <ai-overlay :show="showSlot" @click="showSlot = !showSlot">
+            <view class="overlay">
+                <view class="overlay__box" />
+            </view>
+        </ai-overlay>
+
+        <ai-overlay opacity=".85" :show="showOpcatiy" @click="showOpcatiy = !showOpcatiy" />
+    </ai-page>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            show: false,
+            showSlot: false,
+            showOpcatiy: false,
+            list: [
+                {
+                    title: '基本案列',
+                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/baseCases.png',
+                },
+                {
+                    title: '嵌入内容',
+                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/embeddedContent.png',
+                },
+                {
+                    title: '设置透明度',
+                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/setTransparency.png',
+                },
+            ],
+        };
+    },
+    methods: {
+        openMask(indexNum) {
+            if (indexNum == 0) {
+                this.show = !this.show;
+            } else if (indexNum == 1) {
+                this.showSlot = !this.showSlot;
+            } else if (indexNum == 2) {
+                this.showOpcatiy = !this.showOpcatiy;
+            }
+        },
+        navigateBack() {
+            uni.navigateBack();
+        },
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+.overlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    &__box {
+        width: 200rpx;
+        height: 200rpx;
+        background-color: #70e1f5;
+    }
+}
+</style>

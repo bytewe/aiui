@@ -1,0 +1,113 @@
+/**
+ * vue版本动画内置的动画模式有如下：
+ * fade：淡入
+ * zoom：缩放
+ * fade-zoom：缩放淡入
+ * fade-up：上滑淡入
+ * fade-down：下滑淡入
+ * fade-left：左滑淡入
+ * fade-right：右滑淡入
+ * slide-up：上滑进入
+ * slide-down：下滑进入
+ * slide-left：左滑进入
+ * slide-right：右滑进入
+ */
+
+$zoom-scale: scale(0.95);
+
+.ai-fade-enter-active,
+.ai-fade-leave-active {
+  transition-property: opacity;
+}
+
+.ai-fade-enter,
+.ai-fade-leave-to {
+  opacity: 0
+}
+
+.ai-fade-zoom-enter,
+.ai-fade-zoom-leave-to {
+  transform: $zoom-scale;
+  opacity: 0;
+}
+
+.ai-fade-zoom-enter-active,
+.ai-fade-zoom-leave-active {
+  transition-property: transform, opacity;
+}
+
+.ai-fade-down-enter-active,
+.ai-fade-down-leave-active,
+.ai-fade-left-enter-active,
+.ai-fade-left-leave-active,
+.ai-fade-right-enter-active,
+.ai-fade-right-leave-active,
+.ai-fade-up-enter-active,
+.ai-fade-up-leave-active {
+  transition-property: opacity, transform;
+}
+
+.ai-fade-up-enter,
+.ai-fade-up-leave-to {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0
+}
+
+.ai-fade-down-enter,
+.ai-fade-down-leave-to {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0
+}
+
+.ai-fade-left-enter,
+.ai-fade-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0
+}
+
+.ai-fade-right-enter,
+.ai-fade-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0
+}
+
+.ai-slide-down-enter-active,
+.ai-slide-down-leave-active,
+.ai-slide-left-enter-active,
+.ai-slide-left-leave-active,
+.ai-slide-right-enter-active,
+.ai-slide-right-leave-active,
+.ai-slide-up-enter-active,
+.ai-slide-up-leave-active {
+  transition-property: transform;
+}
+
+.ai-slide-up-enter,
+.ai-slide-up-leave-to {
+  transform: translate3d(0, 100%, 0)
+}
+
+.ai-slide-down-enter,
+.ai-slide-down-leave-to {
+  transform: translate3d(0, -100%, 0)
+}
+
+.ai-slide-left-enter,
+.ai-slide-left-leave-to {
+  transform: translate3d(-100%, 0, 0)
+}
+
+.ai-slide-right-enter,
+.ai-slide-right-leave-to {
+  transform: translate3d(100%, 0, 0)
+}
+
+.ai-zoom-enter-active,
+.ai-zoom-leave-active {
+  transition-property: transform
+}
+
+.ai-zoom-enter,
+.ai-zoom-leave-to {
+  transform: $zoom-scale
+}

@@ -1,0 +1,703 @@
+/*
+ * @Author: airobot
+ * @Date: 2022-01-24 22:45:17
+ * @LastEditors: airobot
+ * @LastEditTime: 2022-06-12 22:42:11
+ * @Description: 样式
+ */
+
+// 基础
+page {
+    width: 100%;
+    min-height: 100%;
+    background: $background-default;
+    font-size: $font-size-normal;
+    line-height: 1.5;
+    color: $color-default;
+}
+
+/* #ifndef APP-NVUE */
+// 由于ai组件是基于nvue环境进行开发的，此环境中普通元素默认为flex-direction: column;
+// 所以在非nvue中，需要对元素进行重置为flex-direction: column; 否则可能会表现异常
+page,
+label,
+view,
+scroll-view,
+swiper-item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+swiper-item {
+    position: absolute;
+}
+
+button {
+    margin: 0;
+}
+
+image,
+input,
+scroll-view,
+swiper,
+swiper-item,
+text,
+textarea,
+video,
+view {
+    position: relative;
+    border: 0 solid #000;
+    box-sizing: border-box;
+}
+
+// 隐藏scroll-view的滚动条
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+// 历遍生成4个方向的底部安全区
+@each $d in top, right, bottom, left {
+    .ai-safe-area-inset-#{$d} {
+        padding-#{$d}: 0;
+        padding-#{$d}: constant(safe-area-inset-#{$d});
+        padding-#{$d}: env(safe-area-inset-#{$d});
+    }
+}
+/* #endif */
+
+/* #ifdef H5 */
+// 提升H5端uni.toast()的层级，避免被ai-modal等遮盖
+uni-toast {
+    z-index: 10090;
+}
+
+uni-toast .uni-toast {
+    z-index: 10090;
+}
+/* #endif */
+
+// 去除button的所有默认样式，让其表现跟普通的view、text元素一样
+.ai-button-reset {
+    padding: 0;
+    background-color: transparent;
+    /* #ifndef APP-PLUS */
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    /* #endif */
+    /* #ifdef APP-NVUE */
+    border-width: 0;
+    /* #endif */
+}
+
+/* #ifndef APP-NVUE */
+.ai-button-reset::after {
+    border: none;
+}
+/* #endif */
+
+// hover
+.ai-hover-class {
+    opacity: 0.7;
+}
+
+// 边框
+.ai-border {
+    & {
+        border-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-style: solid;
+    }
+
+    &--top {
+        border-top-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-top-style: solid;
+    }
+
+    &--left {
+        border-left-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-left-style: solid;
+    }
+
+    &--right {
+        border-right-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-right-style: solid;
+    }
+
+    &--bottom {
+        border-bottom-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-bottom-style: solid;
+    }
+
+    &--top-bottom {
+        border-top-width: 0.5px !important;
+        border-bottom-width: 0.5px !important;
+        border-color: $border-color-light !important;
+        border-top-style: solid;
+        border-bottom-style: solid;
+    }
+}
+
+// 背景色
+.ai-background {
+    // 默认
+    & {
+        background: $background-default;
+    }
+
+    // 主要
+    &-primary {
+        background: $color-primary;
+    }
+
+    &-primary-dark {
+        background: $color-primary-dark;
+    }
+
+    &-primary-gray {
+        background: $color-primary-gray;
+    }
+
+    &-primary-light {
+        background: $color-primary-light;
+    }
+
+    // 成功
+    &-success {
+        background: $color-success;
+    }
+
+    &-success-dark {
+        background: $color-success-dark;
+    }
+
+    &-success-gray {
+        background: $color-success-gray;
+    }
+
+    &-success-light {
+        background: $color-success-light;
+    }
+
+    // 警告
+    &-warning {
+        background: $color-warning;
+    }
+
+    &-warning-dark {
+        background: $color-warning-dark;
+    }
+
+    &-warning-gray {
+        background: $color-warning-gray;
+    }
+
+    &-warning-light {
+        background: $color-warning-light;
+    }
+
+    // 危险
+    &-danger {
+        background: $color-danger;
+    }
+
+    &-danger-dark {
+        background: $color-danger-dark;
+    }
+
+    &-danger-gray {
+        background: $color-danger-gray;
+    }
+
+    &-danger-light {
+        background: $color-danger-light;
+    }
+
+    // 信息
+    &-info {
+        background: $color-info;
+    }
+
+    &-info-dark {
+        background: $color-info-dark;
+    }
+
+    &-info-gray {
+        background: $color-info-gray;
+    }
+
+    &-info-light {
+        background: $color-info-light;
+    }
+}
+
+// 颜色
+.ai-color {
+    &-default {
+        color: $color-default;
+    }
+
+    &-dark {
+        color: $color-dark;
+    }
+
+    &-gray {
+        color: $color-gray;
+    }
+
+    &-light {
+        color: $color-light;
+    }
+
+    // 主要
+    &-primary {
+        color: $color-primary;
+    }
+
+    &-primary-dark {
+        color: $color-primary-dark;
+    }
+
+    &-primary-gray {
+        color: $color-primary-gray;
+    }
+
+    &-primary-light {
+        color: $color-primary-light;
+    }
+
+    // 成功
+    &-success {
+        color: $color-success;
+    }
+
+    &-success-dark {
+        color: $color-success-dark;
+    }
+
+    &-success-gray {
+        color: $color-success-gray;
+    }
+
+    &-success-light {
+        color: $color-success-light;
+    }
+
+    // 警告
+    &-warning {
+        color: $color-warning;
+    }
+
+    &-warning-dark {
+        color: $color-warning-dark;
+    }
+
+    &-warning-gray {
+        color: $color-warning-gray;
+    }
+
+    &-warning-light {
+        color: $color-warning-light;
+    }
+
+    // 危险
+    &-danger {
+        color: $color-danger;
+    }
+
+    &-danger-dark {
+        color: $color-danger-dark;
+    }
+
+    &-danger-gray {
+        color: $color-danger-gray;
+    }
+
+    &-danger-light {
+        color: $color-danger-light;
+    }
+
+    // 信息
+    &-info {
+        color: $color-info;
+    }
+
+    &-info-dark {
+        color: $color-info-dark;
+    }
+
+    &-info-gray {
+        color: $color-info-gray;
+    }
+
+    &-info-light {
+        color: $color-info-light;
+    }
+}
+
+// 超出行数，自动显示行尾省略号，最多5行
+@for $i from 1 through 5 {
+    .ai-line-#{$i} {
+        max-width: 100%;
+        /* #ifdef APP-NVUE */
+        // nvue下，可以直接使用lines属性，这是weex特有样式
+        flex: 1;
+        lines: $i;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        /* #endif */
+        /* #ifndef APP-NVUE */
+        // vue下，单行和多行显示省略号需要单独处理
+        @if $i == 1 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        } @else {
+            display: -webkit-box !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            -webkit-line-clamp: $i;
+            -webkit-box-orient: vertical !important;
+        }
+        /* #endif */
+    }
+}
+
+.ai-padding {
+    & {
+        & {
+            padding: $space-normal;
+        }
+
+        &--xl {
+            padding: $space-xl;
+        }
+
+        &--large {
+            padding: $space-large;
+        }
+
+        &--big {
+            padding: $space-big;
+        }
+
+        &--small {
+            padding: $space-small;
+        }
+
+        &--mini {
+            padding: $space-mini;
+        }
+
+        &--xs {
+            padding: $space-xs;
+        }
+    }
+
+    &-top {
+        & {
+            padding-top: $space-normal;
+        }
+
+        &--xl {
+            padding-top: $space-xl;
+        }
+
+        &--large {
+            padding-top: $space-large;
+        }
+
+        &--big {
+            padding-top: $space-big;
+        }
+
+        &--small {
+            padding-top: $space-small;
+        }
+
+        &--mini {
+            padding-top: $space-mini;
+        }
+
+        &--xs {
+            padding-top: $space-xs;
+        }
+    }
+
+    &-right {
+        & {
+            padding-right: $space-normal;
+        }
+
+        &--xl {
+            padding-right: $space-xl;
+        }
+
+        &--large {
+            padding-right: $space-large;
+        }
+
+        &--big {
+            padding-right: $space-big;
+        }
+
+        &--small {
+            padding-right: $space-small;
+        }
+
+        &--mini {
+            padding-right: $space-mini;
+        }
+
+        &--xs {
+            padding-right: $space-xs;
+        }
+    }
+
+    &-bottom {
+        & {
+            padding-bottom: $space-normal;
+        }
+
+        &--xl {
+            padding-bottom: $space-xl;
+        }
+
+        &--large {
+            padding-bottom: $space-large;
+        }
+
+        &--big {
+            padding-bottom: $space-big;
+        }
+
+        &--small {
+            padding-bottom: $space-small;
+        }
+
+        &--mini {
+            padding-bottom: $space-mini;
+        }
+
+        &--xs {
+            padding-bottom: $space-xs;
+        }
+    }
+
+    &-left {
+        & {
+            padding-left: $space-normal;
+        }
+
+        &--xl {
+            padding-left: $space-xl;
+        }
+
+        &--large {
+            padding-left: $space-large;
+        }
+
+        &--big {
+            padding-left: $space-big;
+        }
+
+        &--small {
+            padding-left: $space-small;
+        }
+
+        &--mini {
+            padding-left: $space-mini;
+        }
+
+        &--xs {
+            padding-left: $space-xs;
+        }
+    }
+}
+
+.ai-margin {
+    & {
+        & {
+            margin: $space-normal;
+        }
+
+        &--xl {
+            margin: $space-xl;
+        }
+
+        &--large {
+            margin: $space-large;
+        }
+
+        &--big {
+            margin: $space-big;
+        }
+
+        &--small {
+            margin: $space-small;
+        }
+
+        &--mini {
+            margin: $space-mini;
+        }
+
+        &--xs {
+            margin: $space-xs;
+        }
+    }
+
+    &-top {
+        & {
+            margin-top: $space-normal;
+        }
+
+        &--xl {
+            margin-top: $space-xl;
+        }
+
+        &--large {
+            margin-top: $space-large;
+        }
+
+        &--big {
+            margin-top: $space-big;
+        }
+
+        &--small {
+            margin-top: $space-small;
+        }
+
+        &--mini {
+            margin-top: $space-mini;
+        }
+
+        &--xs {
+            margin-top: $space-xs;
+        }
+    }
+
+    &-right {
+        & {
+            margin-right: $space-normal;
+        }
+
+        &--xl {
+            margin-right: $space-xl;
+        }
+
+        &--large {
+            margin-right: $space-large;
+        }
+
+        &--big {
+            margin-right: $space-big;
+        }
+
+        &--small {
+            margin-right: $space-small;
+        }
+
+        &--mini {
+            margin-right: $space-mini;
+        }
+
+        &--xs {
+            margin-right: $space-xs;
+        }
+    }
+
+    &-bottom {
+        & {
+            margin-bottom: $space-normal;
+        }
+
+        &--xl {
+            margin-bottom: $space-xl;
+        }
+
+        &--large {
+            margin-bottom: $space-large;
+        }
+
+        &--big {
+            margin-bottom: $space-big;
+        }
+
+        &--small {
+            margin-bottom: $space-small;
+        }
+
+        &--mini {
+            margin-bottom: $space-mini;
+        }
+
+        &--xs {
+            margin-bottom: $space-xs;
+        }
+    }
+
+    &-left {
+        & {
+            margin-left: $space-normal;
+        }
+
+        &--xl {
+            margin-left: $space-xl;
+        }
+
+        &--large {
+            margin-left: $space-large;
+        }
+
+        &--big {
+            margin-left: $space-big;
+        }
+
+        &--small {
+            margin-left: $space-small;
+        }
+
+        &--mini {
+            margin-left: $space-mini;
+        }
+
+        &--xs {
+            margin-left: $space-xs;
+        }
+    }
+}
+
+.ai-border-radius {
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.ai-box-shadow {
+    box-shadow: 0 2rpx 25rpx 0 rgba(52, 80, 109, 0.1);
+}
+
+.ai-padding--top {
+    padding-top: $space-normal;
+
+    &--mini {
+        padding-top: $space-mini;
+    }
+
+    &--small {
+        padding-top: $space-small;
+    }
+}

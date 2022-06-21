@@ -1,0 +1,30 @@
+/*
+ * @Author: airobot
+ * @Date: 2022-01-24 22:33:43
+ * @LastEditors: airobot
+ * @LastEditTime: 2022-01-24 22:40:35
+ * @Description: postcss 配置文件
+ */
+
+const path = require('path');
+module.exports = {
+  parser: require('postcss-comment'),
+  plugins: [
+    require('postcss-import')({
+      resolve(id) {
+        if (id.startsWith('~@/')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(3));
+        } else if (id.startsWith('@/')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(2));
+        } else if (id.startsWith('/') && !id.startsWith('//')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(1));
+        }
+        return id;
+      },
+    }),
+    require('autoprefixer')({
+      remove: process.env.UNI_PLATFORM !== 'h5',
+    }),
+    require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
+  ],
+};
