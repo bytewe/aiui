@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-02-11 21:45:51
+ * @LastEditTime: 2022-06-26 21:08:14
  * @Description: 加载页
 -->
 
@@ -16,18 +16,18 @@
                 :title="item.title"
                 arrow
                 :border="index !== list.length - 1"
-                @click="openLoadingPage(index)"
+                @click="openLoadingPage(item)"
             />
         </ai-cell-group>
 
         <ai-loading-page
-            :loading-text="loadingPageData.loadingText"
-            :image="loadingPageData.image"
-            :loading-mode="loadingPageData.loadingMode"
-            :background="loadingPageData.background"
+            :loading-text="loadingPage.loadingText"
+            :image="loadingPage.image"
+            :loading-mode="loadingPage.loadingMode"
+            :background="loadingPage.background"
             :loading="loading"
-            :color="loadingPageData.color"
-            :loading-color="loadingPageData.loadingColor"
+            :color="loadingPage.color"
+            :loading-color="loadingPage.loadingColor"
         />
     </ai-page>
 </template>
@@ -37,32 +37,34 @@ export default {
     data() {
         return {
             loading: false,
-            loadingPageData: {
-                // 自定义提示内容
-                loadingText: '',
-                // 自定义图片
-                image: '',
-                // 自定义加载动画模式
-                loadingMode: '',
-                // 自定义背景色
-                background: '#ffffff',
-            },
+            loadingPage: {},
             list: [
                 {
                     title: '自定义提示内容',
                     iconUrl: `${uni.$config.static}loading-page/promptContent.png`,
+                    loadingMode: 'semicircle',
+                    loadingText: 'AIUI',
                 },
                 {
                     title: '自定义图片',
                     iconUrl: `${uni.$config.static}loading-page/customPicture.png`,
+                    loadingText: 'AIUI',
+                    image: `${uni.$config.static}common/logo.png`,
                 },
                 {
                     title: '自定义加载动画模式',
                     iconUrl: `${uni.$config.static}loading-page/customMode.png`,
+                    loadingMode: 'circle',
+                    loadingText: 'AIUI',
                 },
                 {
-                    title: '自定义背景色',
+                    title: '自定义颜色',
                     iconUrl: `${uni.$config.static}loading-page/customBgColor.png`,
+                    loadingMode: 'spinner',
+                    loadingText: 'AIUI',
+                    loadingColor: '#ddd',
+                    background: 'rgba(0, 0, 0, 0.3)',
+                    color: '#eee',
                 },
             ],
         };
@@ -71,35 +73,15 @@ export default {
         navigateBack() {
             uni.navigateBack();
         },
-        openLoadingPage(indexNum) {
-            this.loadingPageData = {
-                loadingText: '',
-                image: '',
-                loadingMode: '',
-                background: '#ffffff',
+        openLoadingPage(item) {
+            this.loadingPage = {
+                loadingMode: item.loadingMode || '',
+                loadingText: item.loadingText || '',
+                loadingColor: item.loadingColor || '',
+                background: item.background || '#fff',
+                color: item.color || '',
+                image: item.image || '',
             };
-            if (indexNum == 0) {
-                //自定义提示内容
-                this.loadingPageData.loadingMode = 'semicircle';
-                this.loadingPageData.loadingText = 'Hello uView';
-                (this.loadingPageData.color = '#C8C8C8'), (this.loadingPageData.loadingColor = '#C8C8C8');
-            } else if (indexNum == 1) {
-                // 自定义图片
-                this.loadingPageData.image = '/static/common/logo.png';
-                this.loadingPageData.loadingText = 'AIUI';
-                (this.loadingPageData.color = '#C8C8C8'), (this.loadingPageData.loadingColor = '#C8C8C8');
-            } else if (indexNum == 2) {
-                // 自定义加载动画模式
-                this.loadingPageData.loadingMode = 'circle';
-                this.loadingPageData.loadingText = 'AIUI';
-                (this.loadingPageData.color = '#C8C8C8'), (this.loadingPageData.loadingColor = '#C8C8C8');
-            } else if (indexNum == 3) {
-                // 自定义背景色
-                this.loadingPageData.loadingMode = 'spinner';
-                this.loadingPageData.background = 'rgba(0, 0, 0, 0.3)';
-                this.loadingPageData.loadingText = 'AIUI';
-                (this.loadingPageData.color = '#eee'), (this.loadingPageData.loadingColor = '#ddd');
-            }
             this.loading = true;
             setTimeout(() => {
                 this.loading = false;

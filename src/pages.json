@@ -13,7 +13,7 @@
             }
         },
         {
-            "path": "pages/actionSheet/actionSheet",
+            "path": "pages/action-sheet/action-sheet",
             "style": {
                 "navigationBarTitleText": "上拉菜单"
             }

@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-26 18:15:23
+ * @LastEditTime: 2022-06-26 20:51:31
  * @Description: 标签
 -->
 
@@ -15,7 +15,7 @@
         </ai-box>
 
         <ai-box title="自定义主题">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" />
                 <ai-tag text="标签" type="warning" />
                 <ai-tag text="标签" type="success" />
@@ -24,14 +24,14 @@
         </ai-box>
 
         <ai-box title="圆形标签">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:59vw">
                 <ai-tag text="标签" plain shape="circle" />
                 <ai-tag text="标签" type="warning" shape="circle" />
             </ai-row>
         </ai-box>
 
         <ai-box title="镂空标签">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" plain />
                 <ai-tag text="标签" type="warning" plain />
                 <ai-tag text="标签" type="success" plain />
@@ -40,7 +40,7 @@
         </ai-box>
 
         <ai-box title="镂空带背景色">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" plain plain-fill />
                 <ai-tag text="标签" type="warning" plain plain-fill />
                 <ai-tag text="标签" type="success" plain plain-fill />
@@ -49,7 +49,7 @@
         </ai-box>
 
         <ai-box title="自定义尺寸">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" plain size="mini" />
                 <ai-tag text="标签" type="warning" />
                 <ai-tag text="标签" type="success" plain size="large" />
@@ -57,7 +57,7 @@
         </ai-box>
 
         <ai-box title="可关闭标签">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" size="mini" closable :show="close1" @close="close1 = false" />
                 <ai-tag text="标签" type="warning" closable :show="close2" @close="close2 = false" />
                 <ai-tag text="标签" type="success" plain size="large" closable :show="close3" @close="close3 = false" />
@@ -65,33 +65,37 @@
         </ai-box>
 
         <ai-box title="带图片和图标">
-            <ai-row>
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag text="标签" size="mini" icon="location" plain />
                 <ai-tag text="标签" type="warning" icon="location--fill" />
                 <ai-tag text="标签" type="success" plain size="large" :icon="`${$config.static}example/tag.png`" />
             </ai-row>
         </ai-box>
         <ai-box title="单选标签">
-            <view v-for="(item, index) in radios" :key="index" class="ai-padding-right">
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag
+                    v-for="(item, index) in radios"
+                    :key="index"
                     :text="`选项${index + 1}`"
                     :plain="!item.checked"
                     type="warning"
                     :name="index"
                     @click="radioClick"
                 />
-            </view>
+            </ai-row>
         </ai-box>
         <ai-box title="多选标签">
-            <view v-for="(item, index) in checkboxs" :key="index" class="ai-padding-right">
+            <ai-row justify="between" custom-style="padding-right:20vw">
                 <ai-tag
+                    v-for="(item, index) in checkboxs"
+                    :key="index"
                     :text="`选项${index + 1}`"
                     :plain="!item.checked"
                     type="warning"
                     :name="index"
                     @click="checkboxClick"
                 />
-            </view>
+            </ai-row>
         </ai-box>
     </ai-page>
 </template>

@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-26 18:11:35
+ * @LastEditTime: 2022-06-26 20:31:46
  * @Description: 组件
 -->
 
@@ -254,7 +254,7 @@ export default {
                             nameEn: 'ActionSheet',
                         },
                         {
-                            path: '/pages/actionSheet/actionSheet',
+                            path: '/pages/action-sheet/action-sheet',
                             icon: 'actionSheet',
                             name: 'ActionSheet 上拉菜单',
                             nameEn: 'ActionSheet',
@@ -484,6 +484,11 @@ export default {
                 },
             ],
         };
+    },
+    computed: {
+        $config() {
+            return uni.$config;
+        },
     },
 };
 </script>
