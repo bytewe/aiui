@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-14 23:03:40
+ * @LastEditTime: 2022-06-26 18:15:23
  * @Description: 标签
 -->
 
@@ -68,13 +68,7 @@
             <ai-row>
                 <ai-tag text="标签" size="mini" icon="location" plain />
                 <ai-tag text="标签" type="warning" icon="location--fill" />
-                <ai-tag
-                    text="标签"
-                    type="success"
-                    plain
-                    size="large"
-                    icon="https://ui.bytewe.cn/demo/example/tag.png"
-                />
+                <ai-tag text="标签" type="success" plain size="large" :icon="`${$config.static}example/tag.png`" />
             </ai-row>
         </ai-box>
         <ai-box title="单选标签">
@@ -112,6 +106,11 @@ export default {
             radios: [{ checked: true }, { checked: false }, { checked: false }],
             checkboxs: [{ checked: true }, { checked: false }, { checked: false }],
         };
+    },
+    computed: {
+        $config() {
+            return uni.$config;
+        },
     },
     methods: {
         radioClick(name) {

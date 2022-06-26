@@ -125,31 +125,31 @@ export default {
             list: [
                 {
                     title: '完整日期时间',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/6.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/6.png`,
                 },
                 {
                     title: '年月日',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/4.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/4.png`,
                 },
                 {
                     title: '年月',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/3.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/3.png`,
                 },
                 {
                     title: '时间',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/5.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/5.png`,
                 },
                 {
                     title: '过滤器(保留偶数年)',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/2.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/2.png`,
                 },
                 {
                     title: '格式化',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/1.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/1.png`,
                 },
                 {
                     title: '限制最大最小值',
-                    iconUrl: 'https://ui.bytewe.cn/demo/datetime-picker/7.png',
+                    iconUrl: `${uni.$config.static}datetime-picker/7.png`,
                 },
             ],
         };

@@ -42,15 +42,15 @@ export default {
             list: [
                 {
                     title: '基本案列',
-                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/baseCases.png',
+                    iconUrl: `${uni.$config.static}overlay/baseCases.png`,
                 },
                 {
                     title: '嵌入内容',
-                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/embeddedContent.png',
+                    iconUrl: `${uni.$config.static}overlay/embeddedContent.png`,
                 },
                 {
                     title: '设置透明度',
-                    iconUrl: 'https://ui.bytewe.cn/demo/overlay/setTransparency.png',
+                    iconUrl: `${uni.$config.static}overlay/setTransparency.png`,
                 },
             ],
         };

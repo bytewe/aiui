@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:15
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:13:53
+ * @LastEditTime: 2022-06-26 18:18:24
  * @Description: 头像
 -->
 
@@ -101,7 +101,7 @@ export default {
         // 加载失败的默认头像(组件有内置默认图片)
         defaultUrl: {
             type: String,
-            default: 'https://ui.bytewe.cn/account/avatar.jpg',
+            default: `${uni.$config.static}account/avatar.jpg`,
         },
         // 如果配置了randomBackground为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间
         colorIndex: {

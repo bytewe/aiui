@@ -91,35 +91,35 @@ export default {
             list: [
                 {
                     title: '单个日期',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/7.png',
+                    iconUrl: `${uni.$config.static}calendar/7.png`,
                 },
                 {
                     title: '多个日期',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/8.png',
+                    iconUrl: `${uni.$config.static}calendar/8.png`,
                 },
                 {
                     title: '日期范围',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/9.png',
+                    iconUrl: `${uni.$config.static}calendar/9.png`,
                 },
                 {
                     title: '自定义主题颜色',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/15.png',
+                    iconUrl: `${uni.$config.static}calendar/15.png`,
                 },
                 {
                     title: '自定义文案',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/14.png',
+                    iconUrl: `${uni.$config.static}calendar/14.png`,
                 },
                 {
                     title: '日期最大范围',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/13.png',
+                    iconUrl: `${uni.$config.static}calendar/13.png`,
                 },
                 {
                     title: '显示农历',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/5.png',
+                    iconUrl: `${uni.$config.static}calendar/5.png`,
                 },
                 {
                     title: '默认日期',
-                    iconUrl: 'https://ui.bytewe.cn/demo/calendar/10.png',
+                    iconUrl: `${uni.$config.static}calendar/10.png`,
                 },
             ],
         };

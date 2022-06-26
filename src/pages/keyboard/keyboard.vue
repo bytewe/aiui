@@ -47,23 +47,23 @@ export default {
             list: [
                 {
                     title: '车牌号键盘',
-                    iconUrl: 'https://ui.bytewe.cn/demo/keyboard/car.png',
+                    iconUrl: `${uni.$config.static}keyboard/car.png`,
                 },
                 {
                     title: '数字键盘',
-                    iconUrl: 'https://ui.bytewe.cn/demo/keyboard/number.png',
+                    iconUrl: `${uni.$config.static}keyboard/number.png`,
                 },
                 {
                     title: '身份证键盘',
-                    iconUrl: 'https://ui.bytewe.cn/demo/keyboard/IdCard.png',
+                    iconUrl: `${uni.$config.static}keyboard/IdCard.png`,
                 },
                 {
                     title: '隐藏键盘"."符号',
-                    iconUrl: 'https://ui.bytewe.cn/demo/keyboard/dot.png',
+                    iconUrl: `${uni.$config.static}keyboard/dot.png`,
                 },
                 {
                     title: '打乱键盘按键的顺序',
-                    iconUrl: 'https://ui.bytewe.cn/demo/keyboard/order.png',
+                    iconUrl: `${uni.$config.static}keyboard/order.png`,
                 },
             ],
             show: false,

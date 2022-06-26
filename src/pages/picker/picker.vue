@@ -102,27 +102,27 @@ export default {
             list: [
                 {
                     title: '基础使用',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/2.png',
+                    iconUrl: `${uni.$config.static}picker/2.png`,
                 },
                 {
                     title: '设置默认项',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/5.png',
+                    iconUrl: `${uni.$config.static}picker/5.png`,
                 },
                 {
                     title: '多列联动',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/1.png',
+                    iconUrl: `${uni.$config.static}picker/1.png`,
                 },
                 {
                     title: '加载中状态(切换第一列)',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/3.png',
+                    iconUrl: `${uni.$config.static}picker/3.png`,
                 },
                 {
                     title: '设置标题',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/4.png',
+                    iconUrl: `${uni.$config.static}picker/4.png`,
                 },
                 {
                     title: '允许点击遮罩关闭',
-                    iconUrl: 'https://ui.bytewe.cn/demo/picker/6.png',
+                    iconUrl: `${uni.$config.static}picker/6.png`,
                 },
             ],
         };

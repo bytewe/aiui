@@ -36,7 +36,7 @@
 export default {
     data() {
         return {
-            image: 'https://ui.bytewe.cn/demo/album/1.jpg',
+            image: `${uni.$config.static}album/1.jpg`,
             customImage: '',
         };
     },

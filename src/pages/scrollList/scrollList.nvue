@@ -55,112 +55,112 @@ export default {
             goodsArr: [
                 {
                     price: '230.5',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/1.jpg',
+                    thumbnail: `${uni.$config.static}goods/1.jpg`,
                 },
                 {
                     price: '74.1',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/2.jpg',
+                    thumbnail: `${uni.$config.static}goods/2.jpg`,
                 },
                 {
                     price: '8457',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/6.jpg',
+                    thumbnail: `${uni.$config.static}goods/6.jpg`,
                 },
                 {
                     price: '1442',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/5.jpg',
+                    thumbnail: `${uni.$config.static}goods/5.jpg`,
                 },
                 {
                     price: '541',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/2.jpg',
+                    thumbnail: `${uni.$config.static}goods/2.jpg`,
                 },
                 {
                     price: '234',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/3.jpg',
+                    thumbnail: `${uni.$config.static}goods/3.jpg`,
                 },
                 {
                     price: '562',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/4.jpg',
+                    thumbnail: `${uni.$config.static}goods/4.jpg`,
                 },
                 {
                     price: '251.5',
-                    thumbnail: 'https://ui.bytewe.cn/demo/goods/1.jpg',
+                    thumbnail: `${uni.$config.static}goods/1.jpg`,
                 },
             ],
             menuArr: [
                 [
                     {
                         name: '天猫新品',
-                        icon: 'https://ui.bytewe.cn/demo/menu/11.png',
+                        icon: `${uni.$config.static}menu/11.png`,
                     },
                     {
                         name: '今日爆款',
-                        icon: 'https://ui.bytewe.cn/demo/menu/9.png',
+                        icon: `${uni.$config.static}menu/9.png`,
                     },
                     {
                         name: '天猫国际',
-                        icon: 'https://ui.bytewe.cn/demo/menu/17.png',
+                        icon: `${uni.$config.static}menu/17.png`,
                     },
                     {
                         name: '饿了么',
-                        icon: 'https://ui.bytewe.cn/demo/menu/6.png',
+                        icon: `${uni.$config.static}menu/6.png`,
                     },
                     {
                         name: '天猫超市',
-                        icon: 'https://ui.bytewe.cn/demo/menu/11.png',
+                        icon: `${uni.$config.static}menu/11.png`,
                     },
                     {
                         name: '分类',
-                        icon: 'https://ui.bytewe.cn/demo/menu/2.png',
+                        icon: `${uni.$config.static}menu/2.png`,
                     },
                     {
                         name: '天猫美食',
-                        icon: 'https://ui.bytewe.cn/demo/menu/3.png',
+                        icon: `${uni.$config.static}menu/3.png`,
                     },
                     {
                         name: '阿里健康',
-                        icon: 'https://ui.bytewe.cn/demo/menu/12.png',
+                        icon: `${uni.$config.static}menu/12.png`,
                     },
                     {
                         name: '口碑生活',
-                        icon: 'https://ui.bytewe.cn/demo/menu/7.png',
+                        icon: `${uni.$config.static}menu/7.png`,
                     },
                 ],
                 [
                     {
                         name: '充值中心',
-                        icon: 'https://ui.bytewe.cn/demo/menu/8.png',
+                        icon: `${uni.$config.static}menu/8.png`,
                     },
                     {
                         name: '机票酒店',
-                        icon: 'https://ui.bytewe.cn/demo/menu/10.png',
+                        icon: `${uni.$config.static}menu/10.png`,
                     },
                     {
                         name: '金币庄园',
-                        icon: 'https://ui.bytewe.cn/demo/menu/18.png',
+                        icon: `${uni.$config.static}menu/18.png`,
                     },
                     {
                         name: '阿里拍卖',
-                        icon: 'https://ui.bytewe.cn/demo/menu/15.png',
+                        icon: `${uni.$config.static}menu/15.png`,
                     },
                     {
                         name: '淘宝吃货',
-                        icon: 'https://ui.bytewe.cn/demo/menu/16.png',
+                        icon: `${uni.$config.static}menu/16.png`,
                     },
                     {
                         name: '闲鱼',
-                        icon: 'https://ui.bytewe.cn/demo/menu/4.png',
+                        icon: `${uni.$config.static}menu/4.png`,
                     },
                     {
                         name: '会员中心',
-                        icon: 'https://ui.bytewe.cn/demo/menu/6.png',
+                        icon: `${uni.$config.static}menu/6.png`,
                     },
                     {
                         name: '造点新货',
-                        icon: 'https://ui.bytewe.cn/demo/menu/13.png',
+                        icon: `${uni.$config.static}menu/13.png`,
                     },
                     {
                         name: '土货鲜食',
-                        icon: 'https://ui.bytewe.cn/demo/menu/14.png',
+                        icon: `${uni.$config.static}menu/14.png`,
                     },
                 ],
             ],

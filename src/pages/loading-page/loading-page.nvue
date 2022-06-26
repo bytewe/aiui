@@ -50,19 +50,19 @@ export default {
             list: [
                 {
                     title: '自定义提示内容',
-                    iconUrl: 'https://ui.bytewe.cn/demo/loading-page/promptContent.png',
+                    iconUrl: `${uni.$config.static}loading-page/promptContent.png`,
                 },
                 {
                     title: '自定义图片',
-                    iconUrl: 'https://ui.bytewe.cn/demo/loading-page/customPicture.png',
+                    iconUrl: `${uni.$config.static}loading-page/customPicture.png`,
                 },
                 {
                     title: '自定义加载动画模式',
-                    iconUrl: 'https://ui.bytewe.cn/demo/loading-page/customMode.png',
+                    iconUrl: `${uni.$config.static}loading-page/customMode.png`,
                 },
                 {
                     title: '自定义背景色',
-                    iconUrl: 'https://ui.bytewe.cn/demo/loading-page/customBgColor.png',
+                    iconUrl: `${uni.$config.static}loading-page/customBgColor.png`,
                 },
             ],
         };
@@ -85,7 +85,7 @@ export default {
                 (this.loadingPageData.color = '#C8C8C8'), (this.loadingPageData.loadingColor = '#C8C8C8');
             } else if (indexNum == 1) {
                 // 自定义图片
-                this.loadingPageData.image = '/static/uview/common/logo.png';
+                this.loadingPageData.image = '/static/common/logo.png';
                 this.loadingPageData.loadingText = 'AIUI';
                 (this.loadingPageData.color = '#C8C8C8'), (this.loadingPageData.loadingColor = '#C8C8C8');
             } else if (indexNum == 2) {

@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:25:07
+ * @LastEditTime: 2022-06-26 18:27:51
  * @Description: 富文本组件
 -->
 
@@ -15,7 +15,7 @@
         <!-- #ifdef APP-PLUS-NVUE -->
         <web-view
             ref="web"
-            src="/static/app-plus/mp-html/local.html"
+            :src="`${$config.static}aiui/mp-html/local.html`"
             :style="'margin-top:-4rpx;height:' + height + 'px'"
             @onPostMessage="_onMessage"
         />

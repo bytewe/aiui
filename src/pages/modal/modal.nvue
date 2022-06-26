@@ -62,7 +62,7 @@
         />
 
         <ai-modal title="利剑出鞘,一统江湖" :show="show7" close-on-click-overlay @confirm="() => (show7 = false)">
-            <image style="width: 160rpx; height: 160rpx" src="/static/uview/common/logo.png" />
+            <image style="width: 160rpx; height: 160rpx" src="/static/common/logo.png" />
         </ai-modal>
 
         <ai-modal title="标题" :show="show8" :content="content" close-on-click-overlay show-cancel-button>
@@ -90,39 +90,39 @@ export default {
             list: [
                 {
                     title: '基础使用',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/4.png',
+                    iconUrl: `${uni.$config.static}modal/4.png`,
                 },
                 {
                     title: '无标题',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/5.png',
+                    iconUrl: `${uni.$config.static}modal/5.png`,
                 },
                 {
                     title: '带取消按钮',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/2.png',
+                    iconUrl: `${uni.$config.static}modal/2.png`,
                 },
                 {
                     title: '异步关闭',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/6.png',
+                    iconUrl: `${uni.$config.static}modal/6.png`,
                 },
                 {
                     title: '对调取消和确认按钮',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/3.png',
+                    iconUrl: `${uni.$config.static}modal/3.png`,
                 },
                 {
                     title: '允许点击遮罩关闭',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/7.png',
+                    iconUrl: `${uni.$config.static}modal/7.png`,
                 },
                 {
                     title: '传入slot',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/1.png',
+                    iconUrl: `${uni.$config.static}modal/1.png`,
                 },
                 {
                     title: '自定义按钮',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/8.png',
+                    iconUrl: `${uni.$config.static}modal/8.png`,
                 },
                 {
                     title: '淡入淡出动画',
-                    iconUrl: 'https://ui.bytewe.cn/demo/modal/9.png',
+                    iconUrl: `${uni.$config.static}modal/9.png`,
                 },
             ],
         };

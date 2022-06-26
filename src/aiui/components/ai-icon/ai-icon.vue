@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:15
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 11:44:56
+ * @LastEditTime: 2022-06-26 18:18:49
  * @Description: 图标
 -->
 
@@ -28,7 +28,7 @@ import mixins from '@/aiui/mixins/mixins';
 import { icons } from '@/aiui/components/ai-icon/ai-icon.js';
 // #ifdef APP-NVUE
 // nvue通过weex的dom模块引入字体
-const fontUrl = 'https://ui.bytewe.cn/font/ai-icon.ttf';
+const fontUrl = `${uni.$config.static}font/ai-icon.ttf`;
 const domModule = weex.requireModule('dom');
 domModule.addRule('fontFace', {
     fontFamily: 'ai-icon',

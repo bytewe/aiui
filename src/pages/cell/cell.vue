@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-14 22:24:47
+ * @LastEditTime: 2022-06-26 18:13:01
  * @Description: 单元格
 -->
 
@@ -15,7 +15,7 @@
 
         <ai-cell-group title="自定义图标/图片">
             <ai-cell title="单元格" icon="setting" />
-            <ai-cell title="单元格" icon="https://ui.bytewe.cn/demo/example/tag.png" :border="false" />
+            <ai-cell title="单元格" :icon="`${$config.static}example/tag.png`" :border="false" />
         </ai-cell-group>
 
         <ai-cell-group title="自定义大小">
@@ -56,6 +56,11 @@
 export default {
     data() {
         return {};
+    },
+    computed: {
+        $config() {
+            return uni.$config;
+        },
     },
     methods: {
         click() {

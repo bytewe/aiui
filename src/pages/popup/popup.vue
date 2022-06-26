@@ -66,7 +66,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '顶部弹出',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/modeTop.png',
+                    iconUrl: `${uni.$config.static}popup/modeTop.png`,
                 },
                 {
                     popupData: {
@@ -75,7 +75,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '右侧弹出',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/modeRight.png',
+                    iconUrl: `${uni.$config.static}popup/modeRight.png`,
                 },
                 {
                     popupData: {
@@ -84,7 +84,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '底部弹出',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/modeBottom.png',
+                    iconUrl: `${uni.$config.static}popup/modeBottom.png`,
                 },
                 {
                     popupData: {
@@ -93,7 +93,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '左侧弹出',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/modeLeft.png',
+                    iconUrl: `${uni.$config.static}popup/modeLeft.png`,
                 },
                 {
                     popupData: {
@@ -103,7 +103,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '居中弹出',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/modeCenter.png',
+                    iconUrl: `${uni.$config.static}popup/modeCenter.png`,
                 },
                 {
                     popupData: {
@@ -113,7 +113,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '显示圆角',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/showRadis.png',
+                    iconUrl: `${uni.$config.static}popup/showRadis.png`,
                 },
                 {
                     popupData: {
@@ -123,7 +123,7 @@ export default {
                         closeOnClickOverlay: false,
                     },
                     title: '禁止点击遮罩关闭',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/noClose.png',
+                    iconUrl: `${uni.$config.static}popup/noClose.png`,
                 },
                 {
                     popupData: {
@@ -133,7 +133,7 @@ export default {
                         closeOnClickOverlay: true,
                     },
                     title: '显示关闭按钮',
-                    iconUrl: 'https://ui.bytewe.cn/demo/popup/showCloseBtn.png',
+                    iconUrl: `${uni.$config.static}popup/showCloseBtn.png`,
                 },
             ],
         };

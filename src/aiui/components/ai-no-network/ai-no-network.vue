@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-19 20:44:57
+ * @LastEditTime: 2022-06-26 18:19:11
  * @Description: 无网络提示
 -->
 
@@ -53,7 +53,7 @@ export default {
         // image 没有网络的图片提示
         image: {
             type: String,
-            default: 'https://ui.bytewe.cn/image/empty/wifi.png',
+            default: `${uni.$config.static}empty/wifi.png`,
         },
     },
     data() {

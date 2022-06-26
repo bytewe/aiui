@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:51
+ * @LastEditTime: 2022-06-26 18:15:59
  * @Description: 上传
 -->
 
@@ -77,7 +77,7 @@
                 @delete="deletePic"
             >
                 <image
-                    src="https://ui.bytewe.cn/demo/upload/positive.png"
+                    :src="`${$config.static}upload/positive.png`"
                     mode="widthFix"
                     style="width: 500rpx; height: 300rpx"
                 />
@@ -94,15 +94,15 @@ export default {
             fileList2: [],
             fileList3: [
                 {
-                    url: 'https://ui.bytewe.cn/demo/swiper/1.jpg',
+                    url: `${uni.$config.static}swiper/1.jpg`,
                 },
             ],
             fileList4: [
                 {
-                    url: 'https://ui.bytewe.cn/demo/swiper/1.jpg',
+                    url: `${uni.$config.static}swiper/1.jpg`,
                 },
                 {
-                    url: 'https://ui.bytewe.cn/demo/swiper/1.jpg',
+                    url: `${uni.$config.static}swiper/1.jpg`,
                 },
             ],
             fileList5: [],
@@ -110,7 +110,11 @@ export default {
             fileList7: [],
         };
     },
-    onLoad() {},
+    computed: {
+        $config() {
+            return uni.$config;
+        },
+    },
     methods: {
         // 删除图片
         deletePic(event) {

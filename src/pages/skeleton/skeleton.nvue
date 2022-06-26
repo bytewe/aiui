@@ -49,7 +49,7 @@
         <ai-box>
             <ai-skeleton title avatar rows="2" rows-height="14" :loading="switch2">
                 <view class="skeleton">
-                    <image src="/static/uview/common/logo.png" class="skeleton__image" />
+                    <image src="/static/common/logo.png" class="skeleton__image" />
                     <view class="skeleton__content">
                         <ai-text text="利剑出鞘,一统江湖" type="main" size="16" />
                         <ai-text

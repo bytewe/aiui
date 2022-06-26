@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-14 22:24:01
+ * @LastEditTime: 2022-06-26 18:11:35
  * @Description: 组件
 -->
 
@@ -12,7 +12,7 @@
             <ai-cell
                 v-for="(item, index) in group.list"
                 :key="index"
-                :icon="'https://ui.bytewe.cn/demo/components/' + item.icon + '.png'"
+                :icon="`${$config.static}components/${item.icon}.png`"
                 :title="item.name"
                 :url="item.path"
                 border-length="full"

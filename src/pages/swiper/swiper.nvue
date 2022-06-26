@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:46
+ * @LastEditTime: 2022-06-26 18:13:45
  * @Description: 轮播
 -->
 
@@ -78,68 +78,67 @@ export default {
             currentNum: 0,
             list: [
                 {
-                    // image: 'https://ui.bytewe.cn/demo/resources/video.mp4',
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                    image: `${uni.$config.static}swiper/swiper1.png`,
                     title: '昨夜星辰昨夜风，画楼西畔桂堂东',
-                    poster: 'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                    poster: `${uni.$config.static}swiper/swiper1.png`,
                 },
                 {
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper2.png',
+                    image: `${uni.$config.static}swiper/swiper2.png`,
                     title: '身无彩凤双飞翼，心有灵犀一点通',
                 },
                 {
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper3.png',
+                    image: `${uni.$config.static}swiper/swiper3.png`,
                     title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳',
                 },
             ],
             list1: [
-                'https://ui.bytewe.cn/demo/swiper/swiper1.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper2.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper3.png',
+                `${uni.$config.static}swiper/swiper1.png`,
+                `${uni.$config.static}swiper/swiper2.png`,
+                `${uni.$config.static}swiper/swiper3.png`,
             ],
             list2: [
                 {
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper2.png',
+                    image: `${uni.$config.static}swiper/swiper2.png`,
                     title: '昨夜星辰昨夜风，画楼西畔桂堂东',
                 },
                 {
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                    image: `${uni.$config.static}swiper/swiper1.png`,
                     title: '身无彩凤双飞翼，心有灵犀一点通',
                 },
                 {
-                    image: 'https://ui.bytewe.cn/demo/swiper/swiper3.png',
+                    image: `${uni.$config.static}swiper/swiper3.png`,
                     title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳',
                 },
             ],
             list3: [
-                'https://ui.bytewe.cn/demo/swiper/swiper3.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper2.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                `${uni.$config.static}swiper/swiper3.png`,
+                `${uni.$config.static}swiper/swiper2.png`,
+                `${uni.$config.static}swiper/swiper1.png`,
             ],
             list4: [
                 {
-                    url: 'https://ui.bytewe.cn/demo/resources/video.mp4',
+                    url: `${uni.$config.static}resources/video.mp4`,
                     title: '昨夜星辰昨夜风，画楼西畔桂堂东',
-                    poster: 'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                    poster: `${uni.$config.static}swiper/swiper1.png`,
                 },
                 {
-                    url: 'https://ui.bytewe.cn/demo/swiper/swiper2.png',
+                    url: `${uni.$config.static}swiper/swiper2.png`,
                     title: '身无彩凤双飞翼，心有灵犀一点通',
                 },
                 {
-                    url: 'https://ui.bytewe.cn/demo/swiper/swiper3.png',
+                    url: `${uni.$config.static}swiper/swiper3.png`,
                     title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳',
                 },
             ],
             list5: [
-                'https://ui.bytewe.cn/demo/swiper/swiper3.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper2.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                `${uni.$config.static}swiper/swiper3.png`,
+                `${uni.$config.static}swiper/swiper2.png`,
+                `${uni.$config.static}swiper/swiper1.png`,
             ],
             list6: [
-                'https://ui.bytewe.cn/demo/swiper/swiper2.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper3.png',
-                'https://ui.bytewe.cn/demo/swiper/swiper1.png',
+                `${uni.$config.static}swiper/swiper2.png`,
+                `${uni.$config.static}swiper/swiper3.png`,
+                `${uni.$config.static}swiper/swiper1.png`,
             ],
         };
     },

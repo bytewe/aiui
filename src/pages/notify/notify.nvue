@@ -49,7 +49,7 @@ export default {
                         duration: 3000,
                     },
                     title: '主要通知',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/main.png',
+                    iconUrl: `${uni.$config.static}notify/main.png`,
                 },
                 {
                     notifyData: {
@@ -62,7 +62,7 @@ export default {
                         safeAreaInsetTop: false,
                     },
                     title: '成功通知',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/success.png',
+                    iconUrl: `${uni.$config.static}notify/success.png`,
                 },
                 {
                     notifyData: {
@@ -75,7 +75,7 @@ export default {
                         safeAreaInsetTop: false,
                     },
                     title: '危险通知',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/error.png',
+                    iconUrl: `${uni.$config.static}notify/error.png`,
                 },
                 {
                     notifyData: {
@@ -88,7 +88,7 @@ export default {
                         safeAreaInsetTop: false,
                     },
                     title: '警告通知',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/warning.png',
+                    iconUrl: `${uni.$config.static}notify/warning.png`,
                 },
                 {
                     notifyData: {
@@ -100,7 +100,7 @@ export default {
                         safeAreaInsetTop: false,
                     },
                     title: '自定义样式',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/customStyle.png',
+                    iconUrl: `${uni.$config.static}notify/customStyle.png`,
                 },
                 {
                     notifyData: {
@@ -113,7 +113,7 @@ export default {
                         safeAreaInsetTop: false,
                     },
                     title: '自定义时间',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/customTime.png',
+                    iconUrl: `${uni.$config.static}notify/customTime.png`,
                 },
                 {
                     notifyData: {
@@ -125,7 +125,7 @@ export default {
                         safeAreaInsetTop: true,
                     },
                     title: '插入状态栏高度',
-                    iconUrl: 'https://ui.bytewe.cn/demo/notify/height.png',
+                    iconUrl: `${uni.$config.static}notify/height.png`,
                 },
             ],
         };

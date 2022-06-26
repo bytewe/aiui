@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 11:50:39
+ * @LastEditTime: 2022-06-26 18:17:10
  * @Description: 上拉菜单
 -->
 
@@ -121,27 +121,27 @@ export default {
             list: [
                 {
                     title: '普通使用',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/custom.png',
+                    iconUrl: `${uni.$config.static}actionSheet/custom.png`,
                 },
                 {
                     title: '设置状态',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/status.png',
+                    iconUrl: `${uni.$config.static}actionSheet/status.png`,
                 },
                 {
                     title: '显示取消按钮',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/cancel.png',
+                    iconUrl: `${uni.$config.static}actionSheet/cancel.png`,
                 },
                 {
                     title: '描述内容',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/desc.png',
+                    iconUrl: `${uni.$config.static}actionSheet/desc.png`,
                 },
                 {
                     title: '显示标题(显示圆角)',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/title.png',
+                    iconUrl: `${uni.$config.static}actionSheet/title.png`,
                 },
                 {
                     title: '微信开放能力',
-                    iconUrl: 'https://ui.bytewe.cn/demo/actionSheet/open.png',
+                    iconUrl: `${uni.$config.static}actionSheet/open.png`,
                 },
             ],
         };

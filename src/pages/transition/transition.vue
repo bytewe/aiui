@@ -53,57 +53,57 @@ export default {
                 {
                     mode: 'fade',
                     title: '淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fade.png',
+                    iconUrl: `${uni.$config.static}transition/fade.png`,
                 },
                 {
                     mode: 'fade-up',
                     title: '上滑淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fadeUp.png',
+                    iconUrl: `${uni.$config.static}transition/fadeUp.png`,
                 },
                 {
                     mode: 'zoom',
                     title: '缩放',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/zoom.png',
+                    iconUrl: `${uni.$config.static}transition/zoom.png`,
                 },
                 {
                     mode: 'fade-zoom',
                     title: '缩放淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fadeZoom.png',
+                    iconUrl: `${uni.$config.static}transition/fadeZoom.png`,
                 },
                 {
                     mode: 'fade-down',
                     title: '下滑淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fadeDown.png',
+                    iconUrl: `${uni.$config.static}transition/fadeDown.png`,
                 },
                 {
                     mode: 'fade-left',
                     title: '左滑淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fadeLeft.png',
+                    iconUrl: `${uni.$config.static}transition/fadeLeft.png`,
                 },
                 {
                     mode: 'fade-right',
                     title: '右滑淡入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/fadeRight.png',
+                    iconUrl: `${uni.$config.static}transition/fadeRight.png`,
                 },
                 {
                     mode: 'slide-up',
                     title: '上滑进入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/slideUp.png',
+                    iconUrl: `${uni.$config.static}transition/slideUp.png`,
                 },
                 {
                     mode: 'slide-down',
                     title: '下滑进入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/slideDown.png',
+                    iconUrl: `${uni.$config.static}transition/slideDown.png`,
                 },
                 {
                     mode: 'slide-left',
                     title: '左滑进入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/slideLeft.png',
+                    iconUrl: `${uni.$config.static}transition/slideLeft.png`,
                 },
                 {
                     mode: 'slide-right',
                     title: '右滑进入',
-                    iconUrl: 'https://ui.bytewe.cn/demo/transition/slideRight.png',
+                    iconUrl: `${uni.$config.static}transition/slideRight.png`,
                 },
             ],
         };

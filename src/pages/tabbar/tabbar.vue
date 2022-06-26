@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:46
+ * @LastEditTime: 2022-06-26 18:14:57
  * @Description: Tabbar
 -->
 
@@ -63,12 +63,8 @@
                 @change="(name) => (value4 = name)"
             >
                 <ai-tabbar-item text="首页">
-                    <ai-icon
-                        slot="active-icon"
-                        name="https://ui.bytewe.cn/demo/common/bell-selected.png"
-                        size="32rpx"
-                    />
-                    <ai-icon slot="inactive-icon" name="https://ui.bytewe.cn/demo/common/bell.png" size="32rpx" />
+                    <ai-icon slot="active-icon" :name="`${$config.static}common/bell-selected.png`" size="32rpx" />
+                    <ai-icon slot="inactive-icon" :name="`${$config.static}common/bell.png`" size="32rpx" />
                 </ai-tabbar-item>
                 <ai-tabbar-item text="放映厅" icon="photo" />
                 <ai-tabbar-item text="直播" icon="play" />
@@ -138,7 +134,11 @@ export default {
             value7: 3,
         };
     },
-    onLoad() {},
+    computed: {
+        $config() {
+            return uni.$config;
+        },
+    },
     methods: {
         change5(name) {
             if (name === 1) return uni.$util.toast('请您先登录');
