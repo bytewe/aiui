@@ -558,7 +558,7 @@ export default {
                     color: $color-dark;
                     text-align: center;
                     position: absolute;
-                    bottom: 10rpx;
+                    bottom: 0;
                     font-size: 20rpx;
                     text-align: center;
                     left: 0;

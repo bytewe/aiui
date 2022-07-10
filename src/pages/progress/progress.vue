@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:40
+ * @LastEditTime: 2022-07-10 22:26:19
  * @Description: 进度条
 -->
 
@@ -38,7 +38,16 @@
                 active-color="#3c9cff"
                 inactive-color="#f3f4f6"
             >
-                <text class="progress__slot">{{ percentage4 }}%</text>
+                <ai-text
+                    :text="`${percentage5}%`"
+                    size="mini"
+                    color="white"
+                    background="warning"
+                    :custom-style="{
+                        padding: '2rpx 10rpx',
+                        borderRadius: '200rpx',
+                    }"
+                />
             </ai-line-progress>
         </ai-box>
 
@@ -53,14 +62,30 @@
         </ai-box>
 
         <ai-box>
-            <view class="progress__footer">
-                <view class="progress__button" hover-class="ai-hover-class" @click="computedWidth('minus')">
-                    <text class="progress__button__text">减少</text>
-                </view>
-                <view class="progress__button" hover-class="ai-hover-class" @click="computedWidth('plus')">
-                    <text class="progress__button__text">增加</text>
-                </view>
-            </view>
+            <ai-row justify="around">
+                <ai-button
+                    text="减少"
+                    color="#dbfbdb"
+                    shape="circle"
+                    :custom-style="{
+                        width: '50px',
+                        height: '50px',
+                        color: 'rgb(25, 190, 107)',
+                    }"
+                    @click="computedWidth('minus')"
+                />
+                <ai-button
+                    text="增加"
+                    color="#dbfbdb"
+                    shape="circle"
+                    :custom-style="{
+                        width: '50px',
+                        height: '50px',
+                        color: 'rgb(25, 190, 107)',
+                    }"
+                    @click="computedWidth('plus')"
+                />
+            </ai-row>
         </ai-box>
     </ai-page>
 </template>
@@ -98,38 +123,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.progress {
-    &__slot {
-        padding: 2rpx 10rpx;
-        margin-right: -10rpx;
-        border-radius: 200rpx;
-        background-color: $color-warning;
-        font-size: 20rpx;
-        color: #fff;
-    }
-
-    &__footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    &__button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100rpx;
-        height: 100rpx;
-        margin: 60rpx 60rpx;
-        border-radius: 200rpx;
-        background-color: #dbfbdb;
-
-        &__text {
-            font-size: 26rpx;
-            color: rgb(25, 190, 107);
-        }
-    }
-}
-</style>
+<style lang="scss" scoped></style>

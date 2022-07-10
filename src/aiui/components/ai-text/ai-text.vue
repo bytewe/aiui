@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 11:49:53
+ * @LastEditTime: 2022-07-10 22:13:20
  * @Description: 文本
 -->
 
@@ -39,6 +39,11 @@ export default {
             type: String,
             default: '',
         },
+        // 背景
+        background: {
+            type: String,
+            default: '',
+        },
         // 字体大小
         size: {
             type: [String, Number],
@@ -52,6 +57,11 @@ export default {
         // 文本行高
         lineHeight: {
             type: [String, Number],
+            default: '',
+        },
+        // 外边距
+        margin: {
+            type: String,
             default: '',
         },
         // 文本对齐方式，可选值left|center|right
@@ -81,6 +91,10 @@ export default {
             if (color) {
                 style.color = color;
             }
+            const background = uni.$config[`background-${this.background}`] || this.background;
+            if (background) {
+                style.background = background;
+            }
             if (this.lines) {
                 style.lines = this.lines;
             }
@@ -92,6 +106,9 @@ export default {
             }
             if (lineHeight) {
                 style.lineHeight = uni.$util.addUnit(lineHeight);
+            }
+            if (this.margin) {
+                style.margin = this.margin;
             }
             return uni.$util.deepMerge(style, uni.$util.addStyle(this.customStyle));
         },

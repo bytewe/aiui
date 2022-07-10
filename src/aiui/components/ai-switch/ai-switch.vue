@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 11:48:34
+ * @LastEditTime: 2022-07-10 21:37:28
  * @Description: 开关选择器
 -->
 
@@ -60,7 +60,7 @@ export default {
         // 关闭时的背景颜色
         inactiveColor: {
             type: String,
-            default: uni.$config['background-light'],
+            default: uni.$config['background-white'],
         },
         // 通过v-model双向绑定的值
         value: {

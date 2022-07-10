@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:26:53
+ * @LastEditTime: 2022-07-10 21:16:55
  * @Description: 上传
 -->
 
@@ -123,7 +123,7 @@ export default {
         // 上传区域的图标，只能内置图标
         uploadIcon: {
             type: String,
-            default: 'photo--fill',
+            default: 'image--fill',
         },
         // 上传区域的图标的颜色，默认
         uploadIconColor: {

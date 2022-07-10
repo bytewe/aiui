@@ -2,13 +2,13 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-26 18:15:59
+ * @LastEditTime: 2022-07-10 21:17:50
  * @Description: 上传
 -->
 
 <template>
     <ai-page background="white">
-        <ai-box title="基础用法" direction="row">
+        <ai-box title="基础用法">
             <ai-upload
                 :file-list="fileList1"
                 name="1"
@@ -19,7 +19,7 @@
             />
         </ai-box>
 
-        <ai-box title="上传视频" direction="row">
+        <ai-box title="上传视频">
             <ai-upload
                 :file-list="fileList2"
                 name="2"
@@ -31,7 +31,7 @@
             />
         </ai-box>
 
-        <ai-box title="文件预览" direction="row">
+        <ai-box title="文件预览">
             <ai-upload
                 :file-list="fileList3"
                 name="3"
@@ -43,7 +43,7 @@
             />
         </ai-box>
 
-        <ai-box title="隐藏上传按钮" direction="row">
+        <ai-box title="隐藏上传按钮">
             <ai-upload
                 :file-list="fileList4"
                 name="4"
@@ -54,7 +54,7 @@
             />
         </ai-box>
 
-        <ai-box title="限制上传数量" direction="row">
+        <ai-box title="限制上传数量">
             <ai-upload
                 :file-list="fileList5"
                 name="5"
@@ -65,7 +65,7 @@
             />
         </ai-box>
 
-        <ai-box title="自定义上传样式" direction="row">
+        <ai-box title="自定义上传样式">
             <ai-upload
                 :file-list="fileList6"
                 name="6"
@@ -79,7 +79,8 @@
                 <image
                     :src="`${$config.static}upload/positive.png`"
                     mode="widthFix"
-                    style="width: 500rpx; height: 300rpx"
+                    width="320px"
+                    height="192px"
                 />
             </ai-upload>
         </ai-box>

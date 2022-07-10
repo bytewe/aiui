@@ -2,12 +2,12 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:15
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:13:46
+ * @LastEditTime: 2022-07-10 22:00:50
  * @Description: 相册
 -->
 
 <template>
-    <view class="ai-album">
+    <view :class="['ai-album', customClass]">
         <view
             v-for="(arr, index) in showUrls"
             ref="ai-album__row"
