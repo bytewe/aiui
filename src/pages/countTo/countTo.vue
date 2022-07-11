@@ -2,60 +2,42 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:24
+ * @LastEditTime: 2022-07-11 22:47:05
  * @Description: 数字滚动
 -->
 
 <template>
     <ai-page background="white">
-        <ai-box title="基础功能" direction="row">
+        <ai-box title="基础功能">
             <ai-count-to :end-val="value" @end="end" />
         </ai-box>
 
-        <ai-box title="倒计数" direction="row">
+        <ai-box title="倒计数">
             <ai-count-to :start-val="startVal1" />
         </ai-box>
 
-        <ai-box title="显示小数位" direction="row">
+        <ai-box title="显示小数位">
             <ai-count-to :start-val="startVal2" :end-val="endVal" :decimals="decimals" />
         </ai-box>
 
-        <ai-box title="千分位分隔符" direction="row">
+        <ai-box title="千分位分隔符">
             <ai-count-to :start-val="startVal3" :end-val="endVal2" separator="," :decimals="decimals" />
         </ai-box>
 
-        <ai-box title="自定义控制" direction="row">
+        <ai-box title="自定义控制">
             <ai-count-to ref="uCountTo" :end-val="endVal3" :autoplay="autoplay" />
         </ai-box>
 
         <ai-box>
             <ai-grid border>
-                <ai-grid-item @click="start">
-                    <view class="count-to">
-                        <view class="count-to__circle">
-                            <text class="count-to__circle__text">开始</text>
-                        </view>
-                    </view>
-                </ai-grid-item>
-                <ai-grid-item @click="paused">
-                    <view class="count-to">
-                        <view class="count-to__circle">
-                            <text class="count-to__circle__text">暂停</text>
-                        </view>
-                    </view>
-                </ai-grid-item>
-                <ai-grid-item @click="resume">
-                    <view class="count-to">
-                        <view class="count-to__circle">
-                            <text class="count-to__circle__text">继续</text>
-                        </view>
-                    </view>
-                </ai-grid-item>
+                <ai-grid-item icon="play-circle--fill" text="开始" @click="start" />
+                <ai-grid-item icon="pause-circle" text="暂停" @click="paused" />
+                <ai-grid-item icon="replay" text="继续" @click="resume" />
             </ai-grid>
         </ai-box>
 
-        <ai-box title="自定义" direction="row">
-            <ai-count-to :end-val="value" color="#909399" :font-size="fontSize" :bold="true" />
+        <ai-box title="自定义">
+            <ai-count-to :end-val="value" color="#909399" font-size="40px" bold />
         </ai-box>
     </ai-page>
 </template>
@@ -74,7 +56,6 @@ export default {
             endVal3: 3000,
             autoplay: false,
             color: '#FF0000',
-            fontSize: 40,
         };
     },
     methods: {
@@ -94,28 +75,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.count-to {
-    display: flex;
-    flex-direction: row;
-    border-radius: 200rpx;
-    border: 4rpx #dbfbdb solid;
-
-    &__circle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100rpx;
-        height: 100rpx;
-        margin: 4rpx;
-        border-radius: 200rpx;
-        background-color: #dbfbdb;
-
-        &__text {
-            color: rgb(25, 190, 107);
-            font-size: 26rpx;
-        }
-    }
-}
-</style>
+<style lang="scss" scoped></style>

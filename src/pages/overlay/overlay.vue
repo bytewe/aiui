@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:38
+ * @LastEditTime: 2022-07-11 22:54:43
  * @Description: 遮罩层
 -->
 
@@ -23,9 +23,9 @@
         <ai-overlay :show="show" @click="show = !show" />
 
         <ai-overlay :show="showSlot" @click="showSlot = !showSlot">
-            <view class="overlay">
-                <view class="overlay__box" />
-            </view>
+            <ai-row justify="center">
+                <ai-card background="primary" size="none" custom-style="width: 100px; height: 100px;" />
+            </ai-row>
         </ai-overlay>
 
         <ai-overlay opacity=".85" :show="showOpcatiy" @click="showOpcatiy = !showOpcatiy" />
@@ -72,18 +72,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.overlay {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-
-    &__box {
-        width: 200rpx;
-        height: 200rpx;
-        background-color: #70e1f5;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:35
+ * @LastEditTime: 2022-07-11 22:50:39
  * @Description: 导航栏
 -->
 
@@ -32,11 +32,15 @@
 
         <ai-cell-group title="自定义插槽" :border="false">
             <ai-navbar left-text="返回" title="个人中心" :safe-area-inset-top="false" :fixed="false">
-                <view slot="left" class="navbar__left">
+                <ai-row
+                    slot="left"
+                    justify="between"
+                    custom-style="border: 0.5px solid rgba(0,0,0,0.1); padding: 6rpx 14rpx; border-radius: 100px;"
+                >
                     <ai-icon name="arrow-left" size="19" />
                     <ai-line direction="column" :hairline="false" length="16" margin="0 16rpx" />
                     <ai-icon name="home" size="20" />
-                </view>
+                </ai-row>
             </ai-navbar>
         </ai-cell-group>
     </ai-page>
@@ -63,18 +67,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.navbar {
-    &__left {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        border-width: 0.5px;
-        border-radius: 200rpx;
-        border-color: $border-color-default;
-        padding: 6rpx 14rpx;
-        opacity: 0.8;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

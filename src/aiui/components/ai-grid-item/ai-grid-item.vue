@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:15
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 19:48:21
+ * @LastEditTime: 2022-07-11 22:41:11
  * @Description: 宫格布局项
 -->
 
@@ -16,8 +16,14 @@
         @click="onClick"
     >
         <slot>
-            <ai-icon :name="icon" size="xl" />
-            <ai-text custom-class="ai-padding--top--mini" :text="text" size="small" line="1" />
+            <ai-icon v-if="icon" :name="icon" size="xl" />
+            <ai-text
+                v-if="text"
+                :custom-class="icon ? 'ai-padding--top--mini' : ''"
+                :text="text"
+                size="small"
+                line="1"
+            />
         </slot>
     </view>
 </template>

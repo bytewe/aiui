@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 22:29:24
+ * @LastEditTime: 2022-07-11 22:48:50
  * @Description: 按钮
 -->
 
@@ -168,20 +168,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.button {
-    &__list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex: 1;
-        margin: -$space-mini;
-    }
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        padding: $space-mini;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-06-12 12:23:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-13 22:52:30
+ * @LastEditTime: 2022-07-11 22:54:05
  * @Description: 卡片
 -->
 
@@ -64,24 +64,39 @@ export default {
     border-radius: $border-radius-normal;
     background: $background-white;
 
+    &--none {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    &--xs {
+        padding: 0 $space-xs;
+        border-radius: $border-radius-xs;
+    }
+
     &--mini {
         padding: $space-xs $space-mini;
+        border-radius: $border-radius-mini;
     }
 
     &--small {
         padding: $space-mini $space-small;
+        border-radius: $border-radius-small;
     }
 
     &--normal {
         padding: $space-small $space-normal;
+        border-radius: $border-radius-normal;
     }
 
     &--big {
         padding: $space-normal $space-big;
+        border-radius: $border-radius-big;
     }
 
     &--large {
         padding: $space-big $space-large;
+        border-radius: $border-radius-large;
     }
 
     &--left {
