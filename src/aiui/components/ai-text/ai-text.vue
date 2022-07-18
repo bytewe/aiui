@@ -2,12 +2,12 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-07-10 22:13:20
+ * @LastEditTime: 2022-07-14 10:21:46
  * @Description: 文本
 -->
 
 <template>
-    <text :class="['ai-text', line && `ai-line-${line}`, customClass]" :style="[style]" @click="onClick"
+    <text :class="['ai-text', line && `ai-line-${line}`, customClass]" :style="[_style]" @click="onClick"
         ><slot>{{ text }}</slot></text
     >
 </template>
@@ -21,7 +21,7 @@ export default {
     props: {
         // 显示的值
         text: {
-            type: String,
+            type: [String, Number],
             default: '',
         },
         // 文本显示的行数，如果设置，超出此行数，将会显示省略号
@@ -52,7 +52,7 @@ export default {
         // 文字装饰，下划线，中划线等，可选值 none|underline|line-through
         decoration: {
             type: String,
-            default: 'none',
+            default: '',
         },
         // 文本行高
         lineHeight: {
@@ -67,50 +67,30 @@ export default {
         // 文本对齐方式，可选值left|center|right
         align: {
             type: String,
-            default: 'left',
+            default: '',
         },
         // 文字换行，可选值break-word|normal|anywhere
-        wordWrap: {
+        wrap: {
             type: String,
-            default: 'normal',
+            default: '',
         },
     },
     computed: {
         // 样式
-        style() {
+        _style() {
             const style = {
+                margin: this.margin,
+                fontWeight: this.bold ? 'bold' : '',
+                fontSize: this.size,
+                lineHeight: this.lineHeight || uni.$config[`line-height-${this.size}`] || '',
+                color: this.color,
+                background: this.background,
                 textDecoration: this.decoration,
-                fontWeight: this.bold ? 'bold' : 'normal',
-                wordWrap: this.wordWrap,
+                textAlign: this.align,
+                line: this.line,
+                wordWrap: this.wrap,
             };
-            const size = uni.$config[`font-size-${this.size}`] || this.size;
-            if (size) {
-                style.fontSize = uni.$util.addUnit(size);
-            }
-            const color = uni.$config[`color-${this.color}`] || this.color;
-            if (color) {
-                style.color = color;
-            }
-            const background = uni.$config[`background-${this.background}`] || this.background;
-            if (background) {
-                style.background = background;
-            }
-            if (this.lines) {
-                style.lines = this.lines;
-            }
-            let lineHeight = '';
-            if (this.lineHeight) {
-                lineHeight = uni.$config[`line-height-${this.lineHeight}`] || this.lineHeight;
-            } else if (this.size) {
-                lineHeight = uni.$config[`line-height-${this.size}`] || '';
-            }
-            if (lineHeight) {
-                style.lineHeight = uni.$util.addUnit(lineHeight);
-            }
-            if (this.margin) {
-                style.margin = this.margin;
-            }
-            return uni.$util.deepMerge(style, uni.$util.addStyle(this.customStyle));
+            return uni.$util.getStyle(style, this.customStyle);
         },
     },
     methods: {

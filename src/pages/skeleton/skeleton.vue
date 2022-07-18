@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:43
+ * @LastEditTime: 2022-07-14 07:43:56
  * @Description: 骨架屏
 -->
 
@@ -48,18 +48,16 @@
 
         <ai-box>
             <ai-skeleton title avatar rows="2" rows-height="14" :loading="switch2">
-                <view class="skeleton">
-                    <image src="/static/common/logo.png" class="skeleton__image" />
-                    <view class="skeleton__content">
-                        <ai-text text="利剑出鞘,一统江湖" type="main" size="16" />
+                <ai-row align="top">
+                    <ai-avatar src="/static/common/logo.png" size="32px" />
+                    <ai-content>
+                        <ai-text text="利剑出鞘,一统江湖" size="big" />
                         <ai-text
-                            type="tips"
-                            size="14"
-                            custom-style="margin-top: 10rpx"
                             text="众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用"
+                            custom-class="ai-margin-top--small"
                         />
-                    </view>
-                </view>
+                    </ai-content>
+                </ai-row>
             </ai-skeleton>
         </ai-box>
     </ai-page>
@@ -76,21 +74,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.skeleton {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-    &__image {
-        width: 80rpx;
-        height: 80rpx;
-        border-radius: 200rpx;
-    }
-
-    &__content {
-        margin-left: 20rpx;
-        flex: 1;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

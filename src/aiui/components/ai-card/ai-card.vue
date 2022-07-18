@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-06-12 12:23:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-07-11 22:54:05
+ * @LastEditTime: 2022-07-14 10:36:43
  * @Description: 卡片
 -->
 
@@ -34,8 +34,18 @@ export default {
             type: String,
             default: '',
         },
-        // 对齐
+        // 内边距
+        padding: {
+            type: String,
+            default: '',
+        },
+        // 垂直对齐
         align: {
+            type: String,
+            default: '',
+        },
+        // 水平对齐
+        justify: {
             type: String,
             default: '',
         },
@@ -43,16 +53,14 @@ export default {
     computed: {
         // 样式
         style() {
-            let style = {};
-            if (this.background) {
-                style.background = uni.$config[`background-${this.background}`] || this.background;
-            }
-            if (this.borderRadius) {
-                style.borderRadius = uni.$config[`border-radius-${this.borderRadius}`] || this.borderRadius;
-            } else if (this.padding && uni.$config[`border-radius-${this.padding}`]) {
-                style.borderRadius = uni.$config[`border-radius-${this.padding}`];
-            }
-            return uni.$util.deepMerge(style, uni.$util.addStyle(this.customStyle));
+            const style = {
+                alignItem: this.align,
+                justifyContent: this.justify,
+                background: this.background,
+                borderRadius: this.borderRadius,
+                padding: this.padding,
+            };
+            return uni.$util.getStyle(style, this.customStyle);
         },
     },
 };

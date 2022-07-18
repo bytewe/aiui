@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:16
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 11:47:32
+ * @LastEditTime: 2022-07-14 07:46:43
  * @Description: 步骤条项
 -->
 
@@ -141,7 +141,7 @@ export default {
                 // style.top = this.size.height / 2 + 'px'
             }
             style.backgroundColor = this.parent.children?.[this.index + 1]?.error
-                ? uni.$confi['color-danger']
+                ? uni.$config['color-danger']
                 : this.index < this.parentData.current
                 ? this.parentData.activeColor
                 : this.parentData.inactiveColor;

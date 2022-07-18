@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:37
+ * @LastEditTime: 2022-07-14 10:21:02
  * @Description: 步进器
 -->
 
@@ -66,13 +66,24 @@
 
             <ai-cell title="自定义(为0时减少按钮会消失)" :border="false">
                 <ai-number-box slot="value" v-model="value11" step="1" :min="0" :show-minus="value11 > 0">
-                    <view slot="minus" class="number-box__minus">
-                        <ai-icon name="minus" size="12" />
-                    </view>
-                    <text slot="input" class="number-box__input">{{ value11 }}</text>
-                    <view slot="plus" class="number-box__plus">
-                        <ai-icon name="plus" color="#FFFFFF" size="12" />
-                    </view>
+                    <ai-button
+                        slot="minus"
+                        icon="minus"
+                        type="danger"
+                        size="none"
+                        shape="circle"
+                        custom-style="width: 22px; height: 22px;"
+                        plain
+                    />
+                    <ai-text slot="input" :text="value11" align="center" custom-style="width: 50px;" />
+                    <ai-button
+                        slot="plus"
+                        icon="plus"
+                        type="danger"
+                        size="none"
+                        shape="circle"
+                        custom-style="width: 22px; height: 22px;"
+                    />
                 </ai-number-box>
             </ai-cell>
         </ai-cell-group>
@@ -122,34 +133,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.number-box {
-    &__minus {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 44rpx;
-        height: 44rpx;
-        border: 2rpx solid #e6e6e6;
-        border-radius: 200rpx;
-    }
-
-    &__input {
-        width: 100rpx;
-        padding: 0 20rpx;
-        text-align: center;
-    }
-
-    &__plus {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 44rpx;
-        height: 44rpx;
-        border-radius: 200rpx;
-        background-color: #ff0000;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

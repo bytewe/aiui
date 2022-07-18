@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:40
+ * @LastEditTime: 2022-07-14 10:41:11
  * @Description: 弹窗
 -->
 
@@ -33,15 +33,16 @@
             @close="close"
             @open="open"
         >
-            <view
-                class="popup"
-                :style="{
-                    width: ['bottom', 'top'].includes(popupData.mode) ? '750rpx' : '400rpx',
-                    marginTop: ['left', 'right'].includes(popupData.mode) ? '480rpx' : '0',
+            <ai-card
+                justify="center"
+                :custom-style="{
+                    width: ['bottom', 'top'].includes(popupData.mode) ? '100vw' : '200px',
+                    height: '200px',
+                    marginTop: ['left', 'right'].includes(popupData.mode) ? '240px' : '0',
                 }"
             >
-                <ai-button type="success" text="点我关闭" custom-style="width: 200rpx" @click="show = !show" />
-            </view>
+                <ai-button type="success" text="点我关闭" custom-style="width: 100px" @click="show = !show" />
+            </ai-card>
         </ai-popup>
     </ai-page>
 </template>
@@ -159,13 +160,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.popup {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 400rpx;
-    height: 300rpx;
-}
-</style>
+<style lang="scss" scoped></style>

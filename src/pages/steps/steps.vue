@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-28 23:51:00
  * @LastEditors: airobot
- * @LastEditTime: 2022-04-11 21:39:44
+ * @LastEditTime: 2022-07-14 07:49:04
  * @Description: 步骤条
 -->
 
@@ -53,7 +53,7 @@
                 <ai-steps-item title="已下单" desc="10:30" />
                 <ai-steps-item title="已出库" desc="10:35" />
                 <ai-steps-item title="运输中" desc="11:40">
-                    <text slot="icon" class="steps__icon">运</text>
+                    <ai-button slot="icon" type="warning" shape="circle" size="none" text="运" custom-style="width: 21px; height: 21px" />
                 </ai-steps-item>
             </ai-steps>
         </ai-box>
@@ -87,17 +87,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.steps {
-    &__icon {
-        width: 42rpx;
-        height: 42rpx;
-        background-color: $color-warning;
-        border-radius: 200rpx;
-        font-size: 24rpx;
-        color: #fff;
-        line-height: 42rpx;
-        text-align: center;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

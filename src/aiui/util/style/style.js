@@ -2,11 +2,11 @@
  * @Author: airobot
  * @Date: 2022-02-13 14:53:56
  * @LastEditors: airobot
- * @LastEditTime: 2022-02-15 22:45:34
+ * @LastEditTime: 2022-07-14 10:37:39
  * @Description: 样式
  */
 
-import { trim } from '../base/base';
+import { trim, deepMerge } from '../base/base';
 import test from '../test/test';
 
 // 生成样式
@@ -84,6 +84,47 @@ function getPx(value, unit = false) {
         return unit ? `${uni.upx2px(parseInt(value))}px` : uni.upx2px(parseInt(value));
     }
     return unit ? `${parseInt(value)}px` : parseInt(value);
+}
+
+// 获取样式
+function getStyle(paramStyle, customStyle) {
+    console.log('paramStyle===', paramStyle);
+    const style = {};
+    for (const key in paramStyle) {
+        const value = paramStyle[key];
+        if (value === null || value === undefined || value === '') {
+            continue;
+        }
+        switch (key) {
+            case 'fontWeight':
+            case 'lines':
+            case 'textAlign':
+            case 'textDecoration':
+            case 'wordWrap':
+                style[key] = value;
+                break;
+            case 'fontSize':
+                style.fontSize = this.addUnit(uni.$config[`font-size-${value}`] || value);
+                break;
+            case 'color':
+                style.color = uni.$config[`color-${value}`] || value;
+                break;
+            case 'background':
+                style.background = uni.$config[`background-${value}`] || value;
+                break;
+            case 'lineHeight':
+                style.lineHeight = this.addUnit(uni.$config[`line-height-${value}`] || value);
+                break;
+            case 'borderRadius':
+                style.borderRadius = this.addUnit(uni.$config[`border-radius-${value}`] || value);
+                break;
+            case 'margin':
+            case 'padding':
+                style[key] = this.addUnit(uni.$config[`space-${value}`] || value);
+                break;
+        }
+    }
+    return deepMerge(style, this.addStyle(customStyle));
 }
 
 // 添加样式
@@ -281,6 +322,7 @@ export default {
     alignToJustify,
     type2icon,
     getPx,
+    getStyle,
     addStyle,
     addUnit,
     deleteUnit,

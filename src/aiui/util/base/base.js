@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-02-13 15:02:57
  * @LastEditors: airobot
- * @LastEditTime: 2022-02-13 21:01:28
+ * @LastEditTime: 2022-07-14 10:03:47
  * @Description: 基本方法
  */
 
@@ -97,7 +97,7 @@ function deepClone(obj) {
 }
 
 // 深度合并
-function deepMerge(target = {}, source = {}) {
+export function deepMerge(target = {}, source = {}) {
     target = deepClone(target);
     if (typeof target !== 'object' || typeof source !== 'object') return false;
     for (const prop in source) {

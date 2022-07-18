@@ -2,7 +2,7 @@
  * @Author: airobot
  * @Date: 2022-01-24 22:45:15
  * @LastEditors: airobot
- * @LastEditTime: 2022-06-12 22:28:11
+ * @LastEditTime: 2022-07-14 10:19:40
  * @Description: 按钮
 -->
 
@@ -44,7 +44,7 @@
                     :name="icon"
                     :color="iconColorCom"
                     :size="textSize"
-                    :custom-style="{ marginRight: $config['space-xs'] }"
+                    :custom-style="{ marginRight: text ? $config['space-xs'] : 0 }"
                 />
                 <slot>
                     <text class="ai-button__text" :style="{ fontSize: textSize }">{{ text }}</text>
@@ -460,30 +460,35 @@ $ai-button-plain-background: #fff !default;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: $ai-button-height;
+    height: $ai-button-height;
     padding: $ai-button-padding;
 
     &__loading-text {
         margin-left: $ai-button-loading-text-margin-left;
     }
 
+    &--none {
+        height: auto;
+        padding: 0;
+    }
+
     &--large {
-        min-height: $ai-button-large-height;
+        height: $ai-button-large-height;
         padding: $ai-button-large-padding;
     }
 
     &--big {
-        min-height: $ai-button-big-height;
+        height: $ai-button-big-height;
         padding: $ai-button-big-padding;
     }
 
     &--small {
-        min-height: $ai-button-small-height;
+        height: $ai-button-small-height;
         padding: $ai-button-small-padding;
     }
 
     &--mini {
-        min-height: $ai-button-mini-height;
+        height: $ai-button-mini-height;
         padding: $ai-button-mini-padding;
     }
 
